@@ -1,8 +1,6 @@
 package ru.netology.square;
 
-import org.junit.jupiter.params.ParameterizedTest;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SQRServiceTest {
     @org.junit.jupiter.api.Test
@@ -10,14 +8,48 @@ class SQRServiceTest {
         SQRService service = new SQRService();
 
         // подготавливаем данные:
-        int minNum  = 200;
+        int minNum = 200;
         int maxNum = 1000;
         int expected = 17;
 
         // вызываем целевой метод:
-        int actual = SQRService.square(minNum,maxNum);
+        int actual = SQRService.square(minNum, maxNum);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
+
+    @org.junit.jupiter.api.Test
+    void shouldSquare() {
+        SQRService service = new SQRService();
+
+        // подготавливаем данные:
+        int minNum = 100;
+        int maxNum = 200;
+        int expected = 5;
+
+        // вызываем целевой метод:
+        int actual = SQRService.square(minNum, maxNum);
+
+        // производим проверку (сравниваем ожидаемый и фактический):
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void shouldSquareNumbers() {
+        SQRService service = new SQRService();
+
+        // подготавливаем данные:
+        int minNum = 10;
+        int maxNum = 2500;
+        int expected = 41;
+
+        // вызываем целевой метод:
+        int actual = SQRService.square(minNum, maxNum);
+
+        // производим проверку (сравниваем ожидаемый и фактический):
+        assertEquals(expected, actual);
+    }
+
 }
+
